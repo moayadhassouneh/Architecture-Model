@@ -1,0 +1,5 @@
+﻿
+--initiate db change startup project to dataAccess layer
+Scaffold-DbContext 'Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Work\Architecture-Model\Model.DataAccess\Database1.mdf;Integrated Security=True' Microsoft.EntityFrameworkCore.SqlServer -DataAnnotations -Context 'ModelArchContext' -OutputDir 'Models' -ContextDir 'DatabaseContext' 
+
+
