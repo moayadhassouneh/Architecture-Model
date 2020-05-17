@@ -1,0 +1,17 @@
+﻿
+docker build --tag dockerreactapp .
+docker container ls
+docker run -d -p 8080:80 --name firstDocker dockerreactapp
+docker rm --force dockerreactapp
+
+--docker hub command
+docker tag dockerreactapp moayadhassouneh/reactwithcore:1.0
+docker push moayadhassouneh/reactwithcore:1.0
+
+docker run -it dockerreactapp sh
+
+docker-compose up
+docker-compose down --volumes
+
+
+
