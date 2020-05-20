@@ -25,7 +25,8 @@ stages:
       inputs:
         command: buildAndPush
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        containerRegistry: 'DockerHubConnection'
-        repository: 'model-architect-staging'
+        containerRegistry: |
+          $(DockerHubConnection) 
+        repository: $(model-architect-staging)
         tags: |
           $(tag)
