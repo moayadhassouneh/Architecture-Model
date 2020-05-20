@@ -27,8 +27,9 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
-   - task: Docker@2
-     inputs:
-       containerRegistry: 'DockerHubConnection'
-       repository: 'model-architect-staging'
-       command: 'buildAndPush'
+ - task: Docker@2
+   inputs:
+     containerRegistry: 'DockerHubConnection'
+     repository: 'model-architect-staging'
+     command: 'buildAndPush'
+     Dockerfile: '**/Dockerfile'
