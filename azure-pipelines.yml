@@ -21,8 +21,15 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
+      displayName: Login to Docker Hub
       inputs:
-        containerRegistry: 'DockerHubConnection'
-        repository: 'model-architect-staging'
-        command: 'buildAndPush'
+        command: login
+        containerRegistry: DockerHubConnection       
+    - task: Docker@2
+      displayName: Build and Push
+      inputs:          
+        command: buildAndPush
+        repository: moayadhassouneh/model-architect-staging        
         Dockerfile: '**/Dockerfile'
+        tags: |
+          $(tag)
