@@ -31,4 +31,4 @@ stages:
      inputs:
        containerRegistry: 'DockerHubConnection'
        repository: 'model-architect-staging'
-       command: 'push'
+       command: 'buildAndPush'
