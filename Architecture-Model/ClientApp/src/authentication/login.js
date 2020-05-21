@@ -34,7 +34,7 @@ export class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Login yalla</h1>
+                <h1>First Login after complete first CI/CD properly</h1>
 
                 <p>This is a simple example of Login And Store Token.</p>               
 
