@@ -33,8 +33,4 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-    - task: AzureWebAppContainer@1 # Add this at the end of your file
-      inputs:
-        azureSubscription: DockerHubConnection
-        appName: Model-Archt-Staging
-        containers: moayadhassouneh/model-architect-staging:$(tag)
+    
